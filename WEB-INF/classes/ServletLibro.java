@@ -33,10 +33,10 @@ public class ServletLibro extends HttpServlet{
 
 		// 1 Checar transacción
 		
-		transaccion = request.getParameter("boton");
+		//transaccion = request.getParameter("boton");
 
 		// 2 Transacción Capturar:
-		if (transaccion.equals("Capturar Datos")){
+		if (request.getParameter("bCapturar") != null){
 
 			// 2.1 Obtener datos del URL String
 			datos = obtenerDatos(request);
@@ -48,7 +48,7 @@ public class ServletLibro extends HttpServlet{
 			response.sendRedirect("RespuestaServer.jsp?datos="+respuesta);
 		}
 
-		if (transaccion.equals("Consultar Libros")){
+		if (request.getParameter("bConsultar") != null){
 			
 			//1 Consultar datos de la BD
 			datos=biblio.consultarLibros();
@@ -58,7 +58,7 @@ public class ServletLibro extends HttpServlet{
 			respuestaServer(response,datos);
 		}
 
-		if (transaccion.equals("Consultar Editorial")){
+		if (request.getParameter("bConsultarEdit") != null){
 
 			//Obtener tipo de cuenta a consultar
 			String edit = request.getParameter("editorial");
@@ -70,7 +70,7 @@ public class ServletLibro extends HttpServlet{
 			response.sendRedirect("RespuestaServerTabla.jsp?datos="+datos);
 		}
 
-		if (transaccion.equals("Consultar Titulo")){
+		if (request.getParameter("bConsultarTit") != null){
 			String tit = request.getParameter("titulo");
 
 			datos=biblio.consultarTitulo(tit);

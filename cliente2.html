@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title>Apache y CGIs</title>
+		<script type="text/javascript" src="js/funciones.js"></script>
+	</head>
+	<body>
+		<h2>Banco IoT</h2>
+		<!--<form action='../cgi-bin/ClienteController.py' method='get'>-->
+		<!--<form action='../banco/banco' method='get'>-->
+		<form action='../bancojsp/Cliente.jsp' method='get'>
+			NO. CUENTA:  <input type='text' name='nocta' id='nocta'  value=""><br/>
+			NOMBRE:      <input type='text' name='nombre'id='nombre' value=''><br/>
+			TIPO CUENTA: <input type='text' name='tipo'  id='tipo'   value=""><br/>
+			SALDO:       <input type='text' name='saldo' id='saldo'  value=''><br/><br/>
+					     <input type='submit' name='bCapturar' value='Capturar datos'>
+					     <input type='submit' name='bConsultar' value='Consultar clientes'>
+					     <input type='submit' name='bConsultarNCta' value='Consultar No Cuenta'>
+					     <input type='submit' name='bConsultarTipo' value='Consultar Tipo Cuenta'><br/>
+					     <input type='button' name='bConsultarJson'     id='bConsultarJson'     value='Consultar Clientes JSON'    onclick='consultar()'>
+					     <input type='button' name='bConsultarTipoJson' id='bConsultarTipoJson' value='Consultar Tipo Cuenta JSON' onclick='consultarTipo()'>
+
+		</form>
+
+		<br/><br/>
+        	Transaccion: <div id='transaccion'></div>
+        	<image align='center' alt='IMAGEN' src='../bancojsp/images/nino.jpg'></image>
+	</body>
+</html>

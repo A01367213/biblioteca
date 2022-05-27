@@ -20,19 +20,19 @@
   xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
                       http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
   version="3.1"
-  metadata-complete="true">
+  metadata-complete="true"> 
 
 
   <!-- Define servlets that are included in the example application -->
 
   <servlet>
     <servlet-name>ServletLibro</servlet-name>
-    <servlet-class>ServletLibro</servlet-class>
+    <servlet-class>ServletLibro</servlet-class> 
   </servlet>
   
   <servlet-mapping>
       <servlet-name>ServletLibro</servlet-name>
-      <url-pattern>/libro</url-pattern>  
+      <url-pattern>/libro</url-pattern> 
   </servlet-mapping> 
 
 </web-app>

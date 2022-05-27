@@ -3,9 +3,11 @@
 %>
 
 <html>
-  <head><title>WEB Server Tomcat</title></head>
-    <body>
-        <h1>BD Banco</h1><p>
+  <head>
+  	<title>WEB Server Tomcat</title>
+  	<link rel="stylesheet" type="text/css" href="styles/styles.css">
+  </head>
+    <body class="body2">
         <hr>
         <table border=1><%= datos %></table>
     </body>
